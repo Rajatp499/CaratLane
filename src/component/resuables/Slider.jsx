@@ -52,32 +52,29 @@ const Slider = () => {
     };
 
     return (
-        <div className="relative flex flex-col items-center">
-            {window.innerWidth > 980
-                ? images.map((image, index) => (
-                    <img
-                        key={index}
-                        src={image}
-                        alt={`Slide ${index}`}
-                        className={`w-full object-cover transition-opacity ${
-                            index === currentImageIndex
-                                ? "opacity-100"
-                                : "opacity-0 absolute top-0 left-0"
-                        }`}
-                    />
-                ))
-                : mobileImages.map((image, index) => (
-                    <img
-                        key={index}
-                        src={image}
-                        alt={`Slide ${index}`}
-                        className={`w-full object-cover transition-opacity ${
-                            index === currentImageIndex
-                                ? "opacity-100"
-                                : "opacity-0 absolute top-0 left-0"
-                        }`}
-                    />
-                ))}
+        <div className="relative flex items-center overflow-hidden w-full h-full jusitfy-center">
+            <div
+                className="flex transition-transform duration-500 ease-in-out"
+                style={{ transform: `translateX(-${currentImageIndex * 100}%)` }}
+            >
+                {window.innerWidth > 980
+                    ? images.map((image, index) => (
+                        <img
+                            key={index}
+                            src={image}
+                            alt={`Slide ${index}`}
+                            className="w-full h-full object-cover flex-shrink-0"
+                        />
+                    ))
+                    : mobileImages.map((image, index) => (
+                        <img
+                            key={index}
+                            src={image}
+                            alt={`Slide ${index}`}
+                            className="w-full h-full object-cover flex-shrink-0"
+                        />
+                    ))}
+            </div>
 
             {/* Blob Div */}
             <ImageSliderControls

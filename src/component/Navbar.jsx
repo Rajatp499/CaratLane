@@ -5,7 +5,7 @@ import ReactFlagsSelect from "react-flags-select";
 import ReactPlaceholderTyping from 'react-placeholder-typing'
 
 //logo
-import Logo from "../assets/svg/logo";
+import Logo from "../assets/svg/Logo";
 
 //icons
 import { IoSearch } from "react-icons/io5";
@@ -69,7 +69,7 @@ import bridal_set from "../assets/accessories/bridal_set.jpg";
 import mens_solitaire from "../assets/accessories/mens_solitaire.png";
 import necklace from "../assets/accessories/necklace.jpg";
 import pendant from "../assets/accessories/pendant.jpg";
-import solitaires_ad from "../assets/accessories/solitaires_ad.jpg"
+import solitaires_ad from "../assets/accessories/Solitaires_ad.jpg"
 
 
 

@@ -2,7 +2,7 @@ import React from "react";
 import { IoChevronBackCircleOutline,IoChevronForwardCircleOutline } from "react-icons/io5";
 const ImageSliderControls = ({ currentSlide, totalSlides, onPrev, onNext }) => {
     return (
-        <div className="flex items-center justify-center space-x-4 mt-4 absolute bottom-[26px]">
+        <div className="flex items-center justify-center space-x-4 mt-4 absolute bottom-[26px] left-1/2 translate-x-[-50%]">
             {/* Left Arrow */}
             <IoChevronBackCircleOutline 
                 onClick={onPrev}
