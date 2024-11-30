@@ -16,6 +16,18 @@ import { AiFillGolden } from "react-icons/ai";
 import { IoDiamondSharp } from "react-icons/io5";
 import { GiFireGem } from "react-icons/gi";
 import { GiOysterPearl } from "react-icons/gi";
+import { AiOutlineCodepenCircle } from "react-icons/ai";
+import { SiInkdrop } from "react-icons/si";
+import { GiMineralHeart } from "react-icons/gi";
+import { IoSquare } from "react-icons/io5";
+import { TbOvalFilled } from "react-icons/tb";
+import { SiRubygems } from "react-icons/si";
+
+
+
+
+
+
 
 //Rings-images
 import engagement from "../assets/accessories/engagement.jpg";
@@ -51,6 +63,14 @@ import diamond_bracelet from "../assets/accessories/diamond_bracelet.jpg";
 import kt_bracelet from "../assets/accessories/22kt_bracelet.png";
 import silver_bracelet from "../assets/accessories/silver_bracelet.jpg";
 import bracelet_ad from "../assets/accessories/bracelet_ad.jpg"
+
+//Solitaires images
+import bridal_set from "../assets/accessories/bridal_set.jpg";
+import mens_solitaire from "../assets/accessories/mens_solitaire.png";
+import necklace from "../assets/accessories/necklace.jpg";
+import pendant from "../assets/accessories/pendant.jpg";
+import solitaires_ad from "../assets/accessories/solitaires_ad.jpg"
+
 
 
 
@@ -163,6 +183,10 @@ const Navbar = () => {
           id: 6,
           name: "FOR MEN",
         },
+        {
+          id: 7,
+          name: "FOR WOMEN",
+        },
       ],
     },
     {
@@ -250,6 +274,127 @@ const Navbar = () => {
         },
         {
           id: 2,
+          name: "₹10k to ₹20K",
+        },
+        {
+          id: 3,
+          name: "₹20k to ₹40K",
+        },
+        {
+          id: 4,
+          name: "₹40k to ₹50K",
+        },
+        {
+          id: 5,
+          name: "Above ₹50K",
+        },
+        {
+          id: 6,
+          name: "FOR WOMEN",
+        },
+      ],
+    },
+    {
+      id: 3,
+      name: "Bracelets & Bangles",
+      ad:bracelet_ad,
+      shopbystyle: [
+        {
+          id: 1,
+          name: "Chain Bracelets",
+          image: chain_bracelet,
+        },
+        {
+          id: 2,
+          name: "Flexible Bracelets",
+          image: flexible_bracelet,
+        },
+        {
+          id: 3,
+          name: "Lightwear Bracelets",
+          image: lightwear_bracelet,
+        },
+        {
+          id: 4,
+          name: "Gold Bangles",
+          image: gold_bracelet,
+        },
+        {
+          id: 5,
+          name: "Kids Bracelets",
+          image: kids_bracelet,
+        },
+        {
+          id: 6,
+          name: "Oval Bracelets",
+          image: oval_bracelet,
+        },
+        {
+          id: 7,
+          name: "Mangalsutra Bracelets",
+          image: mangalsutra_bracelet,
+        },
+        {
+          id: 8,
+          name: "Diamond Bangles",
+          image: diamond_bracelet,
+        },
+        {
+          id: 9,
+          name: "2kt Bracelets",
+          image: kt_bracelet,
+        },
+        {
+          id: 10,
+          name: "Silver Bracelets",
+          image: silver_bracelet,
+        },
+      ],
+      shopbymetalandstone: [
+        {
+          id: 1,
+          name: "Rose Gold",
+          image: AiFillGolden,
+          color: "yellow",
+        },
+        {
+          id: 2,
+          name: "White Gold",
+          image: AiFillGolden,
+          color: "slate",
+        },
+        {
+          id: 3,
+          name: "Yellow Gold",
+          image: AiFillGolden,
+          color: "stone",
+        },
+        {
+          id: 4,
+          name: "Navratna",
+          image: GiFireGem,
+          color: "slate",
+        },
+        {
+          id: 5,
+          name: "Gem Stone",
+          image: GiFireGem,
+          color: "stone",
+        },
+        {
+          id: 6,
+          name: "22K Gold",
+          image: AiFillGolden,
+          color: "stone",
+        },
+      ],
+      shopby: [
+        {
+          id: 1,
+          name: "Under ₹ 10k",
+        },
+        {
+          id: 2,
           name: "₹10k to ₹30K",
         },
         {
@@ -268,126 +413,117 @@ const Navbar = () => {
           id: 6,
           name: "FOR MEN",
         },
+        {
+          id: 7,
+          name: "FOR WOMEN",
+        },
       ],
-    },
-    {
-      id: 3,
-      name: "Bracelets & Bangles",
-      // ad:bracelet_ad,
-      // shopbystyle: [
-      //   {
-      //     id: 1,
-      //     name: "Chain Bracelets",
-      //     image: chain_bracelet,
-      //   },
-      //   {
-      //     id: 2,
-      //     name: "Flexible Bracelets",
-      //     image: flexible_bracelet,
-      //   },
-      //   {
-      //     id: 3,
-      //     name: "Lightwear Bracelets",
-      //     image: lightwear_bracelet,
-      //   },
-      //   {
-      //     id: 4,
-      //     name: "Gold Bangles",
-      //     image: gold_bracelet,
-      //   },
-      //   {
-      //     id: 5,
-      //     name: "Kids Bracelets",
-      //     image: kids_bracelet,
-      //   },
-      //   {
-      //     id: 6,
-      //     name: "Oval Bracelets",
-      //     image: oval_bracelet,
-      //   },
-      //   {
-      //     id: 7,
-      //     name: "Mangalsutra Bracelets",
-      //     image: mangalsutra_bracelet,
-      //   },
-      //   {
-      //     id: 8,
-      //     name: "Diamond Bangles",
-      //     image: diamond_bracelet,
-      //   },
-      //   {
-      //     id: 9,
-      //     name: "2kt Bracelets",
-      //     image: kt_bracelet,
-      //   },
-      //   {
-      //     id: 10,
-      //     name: "Silver Bracelets",
-      //     image: silver_bracelet,
-      //   },
-      // ],
-      // shopbymetalandstone: [
-      //   {
-      //     id: 1,
-      //     name: "Gold",
-      //     image: AiFillGolden,
-      //     color: "yellow",
-      //   },
-      //   {
-      //     id: 2,
-      //     name: "Diamond",
-      //     image: IoDiamondSharp,
-      //     color: "slate",
-      //   },
-      //   {
-      //     id: 3,
-      //     name: "Gem Stone",
-      //     image: GiFireGem,
-      //     color: "stone",
-      //   },
-      //   {
-      //     id: 4,
-      //     name: "Navratna",
-      //     image: GiFireGem,
-      //     color: "slate",
-      //   },
-      //   {
-      //     id: 5,
-      //     name: "Pearl",
-      //     image: GiOysterPearl,
-      //     color: "stone",
-      //   },
-      // ],
-      // shopby: [
-      //   {
-      //     id: 1,
-      //     name: "Under ₹ 10k",
-      //   },
-      //   {
-      //     id: 2,
-      //     name: "₹10k to ₹30K",
-      //   },
-      //   {
-      //     id: 3,
-      //     name: "₹30k to ₹50K",
-      //   },
-      //   {
-      //     id: 4,
-      //     name: "₹50k to ₹80K",
-      //   },
-      //   {
-      //     id: 5,
-      //     name: "Above ₹80K",
-      //   },
-      //   {
-      //     id: 6,
-      //     name: "FOR MEN",
-      //   },
-      // ],
     },
     {
       id: 4,
       name: "Solitaires",
+      ad:solitaires_ad,
+      shopbystyle: [
+        {
+          id: 1,
+          name: "Rings",
+          image: bands,
+        },
+        {
+          id: 2,
+          name: "Pendants",
+          image: pendant,
+        },
+        {
+          id: 3,
+          name: "Necklaces",
+          image: necklace,
+        },
+        {
+          id: 4,
+          name: "Men's Solitaire",
+          image: mens_solitaire,
+        },
+        {
+          id: 5,
+          name: "Earrings",
+          image: pearl_earrings,
+        },
+        {
+          id: 6,
+          name: "Bridal Set",
+          image: bridal_set,
+        },
+      ],
+      shopbymetalandstone: [
+        {
+          id: 1,
+          name: "Round",
+          image: AiOutlineCodepenCircle,
+          color: "yellow",
+        },
+        {
+          id: 2,
+          name: "Pear",
+          image: SiInkdrop,
+          color: "slate",
+        },
+        {
+          id: 3,
+          name: "Heart",
+          image: GiMineralHeart,
+          color: "stone",
+        },
+        {
+          id: 4,
+          name: "Princess",
+          image: IoSquare,
+          color: "slate",
+        },
+        {
+          id: 5,
+          name: "Oval",
+          image: TbOvalFilled,
+          color: "stone",
+        },
+        {
+          id: 6,
+          name: "Emerald",
+          image: SiRubygems,
+          color: "stone",
+        },
+      ],
+      shopby: [
+        {
+          id: 1,
+          name: "Under ₹ 10k",
+        },
+        {
+          id: 2,
+          name: "₹10k to ₹30K",
+        },
+        {
+          id: 3,
+          name: "₹30k to ₹50K",
+        },
+        {
+          id: 4,
+          name: "₹50k to ₹80K",
+        },
+        {
+          id: 5,
+          name: "Above ₹80K",
+        },
+        {
+          id: 6,
+          name: "FOR MEN",
+        },
+        {
+          id: 7,
+          name: "FOR WOMEN",
+        },
+      ],
+
     },
     {
       id: 5,
@@ -406,8 +542,8 @@ const Navbar = () => {
   //flag
   const [selected, setSelected] = useState("NP");
   //dropdown
-  const [dropDown, setDropDown] = useState(false);
-  const [hovered, setHovered] = useState(0);
+  const [dropDown, setDropDown] = useState(false); //To enable or disable dropdown menu
+  const [hovered, setHovered] = useState(0); //To determine which dropdown sub menu to enable
 
  //placeholder
  const placeholders = ['Search Price','Search relationship','Search Brands'];
@@ -427,14 +563,15 @@ const Navbar = () => {
                 <div
                   key={items.id}
                   onMouseEnter={() => {
-                    if (items.name == "Rings" || items.name == "Earrings") {
+                    if (items.name == "Rings" || items.name == "Earrings" || items.name == "Bracelets & Bangles" || items.name == "Solitaires") {
                       setDropDown(true);
                     } else {
                       setDropDown(false);
                     }
-                    items.name == "Rings" ? setHovered(0) : setHovered(0);
-                    items.name == "Earrings" ? setHovered(1) : setHovered(0);
-                    // items.name == "Bracelets & Bangles" ? setHovered(2) : setHovered(0);
+                    items.name == "Rings" ? setHovered(0) : null;
+                    items.name == "Earrings" ? setHovered(1) : null;
+                    items.name == "Bracelets & Bangles" ? setHovered(2) : null;
+                    items.name == "Solitaires" ? setHovered(3) : null;
                   }}
                   onMouseLeave={() => setDropDown(false)}
                   className=" h-full flex items-center hover:border-b-2 hover:border-dark-purple hover:text-dark-purple hover:cursor-pointer"
@@ -475,12 +612,14 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+
+      {/* DROPDOWN MENU */}
       <div
         onMouseEnter={() => setDropDown(true)}
         onMouseLeave={() => setDropDown(false)}
         className={
           dropDown
-            ? " absolute h-5/6 w-screen shadow-2xl flex flex-row overflow-hidden"
+            ? " absolute h-5/6 w-screen shadow-2xl flex flex-row  bg-white z-2"
             : "hidden"
         }
       >
@@ -493,10 +632,10 @@ const Navbar = () => {
             {menu[hovered].shopbystyle.map((items) => {
               return (
                 <div
-                  className="h-24 flex items-center cursor-pointer w-2/5 justify-evenly hover:font-semibold"
+                  className="h-20  flex items-center cursor-pointer w-2/5 justify-evenly font-xl hover:font-semibold"
                   key={items.id}
                 >
-                  <img src={items.image} className="h-14 w-fit" />
+                  <img src={items.image} className="h-14 w-fit mr-2" />
                   {items.name}
                 </div>
               );
@@ -539,15 +678,15 @@ const Navbar = () => {
               );
             })}
           </div>
-          <div className="mt-20 text-center border-t-2 border-dark-purple w-fit p-2">
+          <div className="mt-20 text-center border-t-2 border-dark-purple w-fit p-2 cursor-pointer hover:font-semibold">
             SHOW ALL DESIGNS
           </div>
         </div>
         <div className=" ">
          <img src={menu[hovered].ad} className="pr-2"/>
         </div>
-
       </div>
+      s
     </>
   );
 };
