@@ -619,7 +619,7 @@ const Navbar = () => {
         onMouseLeave={() => setDropDown(false)}
         className={
           dropDown
-            ? " absolute h-5/6 w-screen shadow-2xl flex flex-row  bg-white z-2"
+            ? " absolute h-5/6 w-screen shadow-2xl flex flex-row  bg-white z-2 z-10"
             : "hidden"
         }
       >
