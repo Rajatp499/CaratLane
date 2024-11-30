@@ -1,6 +1,9 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
+import classNames from "classnames";
+
 const ImageGrid = () => {
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
     const images = [
         {
             src: "https://cdn.caratlane.com/media/static/images/V4/2024/Shaya/11-Nov/Responsive/27/Responsive-05.jpg",
@@ -16,26 +19,35 @@ const ImageGrid = () => {
         },
     ];
 
-    const [currentwindowWidth, setCurrentWindowWidth] = useState(window.innerWidth);
+    const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+    };
 
     useEffect(() => {
-        const handleResize = () => {
-            setCurrentWindowWidth(window.innerWidth);
-        };
-
+        // Add event listener to track window resize
         window.addEventListener("resize", handleResize);
 
+        // Cleanup event listener on component unmount
         return () => {
             window.removeEventListener("resize", handleResize);
         };
-    }
-    , []);
+    }, []);
 
+    const outerdiv = classNames(
+        "grid  grid-cols-1 mt-6 gap-3  h-fit ",
+        
+        "md:p-6 md:gap-6 md:grid-cols-2"
+    );
+
+    const imageStyle = "w-full h-full object-cover  shadow-md";
+
+    const rightColStyle = classNames(
+        "col-span-1 grid grid-rows-1 gap-3",
+        "md:gap-6 md:grid-rows-2"
+    );
     return (
-        <div
-            className={`grid ${window.innerWidth > 980 ? "grid-cols-2 p-4" : "grid-cols-1 mt-6"} gap-4  h-fit `}
-        >
-            {window.innerWidth > 770 ? (
+        <div className={outerdiv}>
+            {windowWidth > 768 ? (
                 // Desktop View
                 <>
                     {/* Left Column */}
@@ -43,18 +55,18 @@ const ImageGrid = () => {
                         <img
                             src={images[0].src}
                             alt={images[0].alt}
-                            className="w-full h-full object-cover  shadow-md"
+                            className={imageStyle}
                         />
                     </div>
 
                     {/* Right Column */}
-                    <div className="col-span-1 grid grid-rows-2 gap-4">
+                    <div className={rightColStyle}>
                         {/* Top Image */}
                         <div className="row-span-1">
                             <img
                                 src={images[1].src}
                                 alt={images[1].alt}
-                                className="w-full h-full object-cover  shadow-md"
+                                className={imageStyle}
                             />
                         </div>
 
@@ -63,7 +75,7 @@ const ImageGrid = () => {
                             <img
                                 src={images[2].src}
                                 alt={images[2].alt}
-                                className="w-full h-full object-cover  shadow-md"
+                                className={imageStyle}
                             />
                         </div>
                     </div>
@@ -76,7 +88,7 @@ const ImageGrid = () => {
                             <img
                                 src={image.src}
                                 alt={image.alt}
-                                className="w-full object-cover  shadow-md"
+                                className={imageStyle}
                             />
                         </div>
                     ))}
